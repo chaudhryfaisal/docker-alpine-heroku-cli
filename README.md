@@ -12,7 +12,7 @@ Another method would be to mount your `~/.netrc` as a volume on the docker conta
 
 deploy-dev:
   stage: deploy-dev
-  stage: chaudhryfaisal/docker-alpine-heroku-cli
+  image: chaudhryfaisal/docker-alpine-heroku-cli
   environment:
     name: dev
   script:
