@@ -2,11 +2,11 @@ NAME := docker-alpine-heroku-cli
 
 IMAGE_URL := chaudhryfaisal/$(NAME)
 
-image-create:
+build:
 	docker build --pull -t ${IMAGE_URL} .
 
-run: image-create
+run: build
 	docker run -p 8091:80 -it ${IMAGE_URL}
 
-push: image-create
+push: build
 	docker push ${IMAGE_URL}
